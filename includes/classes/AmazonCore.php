@@ -131,9 +131,9 @@ abstract class AmazonCore{
         }
         $this->setConfig($config);
 
-	if ($s != null){
+        if ($s != null){
             $this->setStore($s);
-	}
+        }
 
         $this->setMock($mock,$m);
 
