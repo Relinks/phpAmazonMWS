@@ -524,7 +524,7 @@ abstract class AmazonCore{
                 //attempt to create the file if it does not exist
                 file_put_contents($this->logpath, "This is the Amazon log, for Amazon classes to use.\n");
             }
-            if (file_exists($this->logpath) && is_writable($this->logpath)){
+            if (file_exists($this->logpath)){
                 $str = "[$level][" . date("Y/m/d H:i:s") . " $name@$ip $fileName:$line $function] " . $msg;
                 $fd = fopen($this->logpath, "a+");
                 fwrite($fd,$str . "\r\n");
